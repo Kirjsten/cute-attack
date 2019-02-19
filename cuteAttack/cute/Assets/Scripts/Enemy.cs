@@ -18,11 +18,11 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.name == "bullet")
-        Destroy(gameObject);
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.name == "bullet")
+    //    Destroy(gameObject);
+    //}
 
     void Update()
     {

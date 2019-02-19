@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController: MonoBehaviour
 {
 
-    public Transform target;
+    //public Transform target;
     private Vector3 offset;
 
     private float rotationSpeed = 1f;
@@ -18,7 +18,7 @@ public class CameraController: MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        offset = transform.position - target.position;
+        //offset = transform.position - target.position;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class CameraController: MonoBehaviour
     {
         /* Camera follows the target */
         //transform.LookAt(target, Vector3.up);
-        transform.position = target.position + offset;
+        //transform.position = target.position + offset;
 
         /* Camera rotation */
         rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * rotationSpeed;
@@ -39,7 +39,7 @@ public class CameraController: MonoBehaviour
         if (scrollWheel != 0)
         {
             transform.position += transform.forward * scrollWheel * zoomInOutSpeed * Time.deltaTime;
-            offset = transform.position - target.position;
+           // offset = transform.position - target.position;
         }
     }
 }
